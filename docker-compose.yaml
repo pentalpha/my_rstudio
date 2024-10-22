@@ -1,0 +1,26 @@
+version: "3"
+services:
+  rstudio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8787:8787"
+    volumes:
+      - type: volume
+        source: rstudio
+        target: /home/rstudio
+      - type: volume
+        source: r_libs
+        target: /usr/local/lib/R
+      - type: "bind"
+        source: /home/pitagoras/data
+        target: /home/rstudio/data
+      - type: "bind"
+        source: /home/pitagoras/experiments
+        target: /home/rstudio/experiments
+    environment:
+      - PASSWORD=1234
+volumes:
+  r_libs:
+  rstudio:
