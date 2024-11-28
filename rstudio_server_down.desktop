@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=/home/pitagoras/software/rstudio/rstudio_server_down.sh
+Icon=rstudio
+Type=Application
+Terminal=true
+Name=RStudio Server Down
+Categories=Development;IDE;

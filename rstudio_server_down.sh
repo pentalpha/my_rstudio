@@ -1,0 +1,1 @@
+cd ~/software/rstudio && docker compose down
