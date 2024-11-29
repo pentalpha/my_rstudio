@@ -17,6 +17,8 @@ RUN R --slave -e "install.packages('leiden', repos='https://cloud.r-project.org/
 RUN R --slave -e "library(BiocManager); BiocManager::install('ontoProc')"
 RUN R --slave -e "library(BiocManager); BiocManager::install('BiocStyle')"
 RUN R --slave -e "library(ontoProc);"
+RUN R --slave -e "install.packages('igraph', repos='https://cloud.r-project.org/'); library('igraph')"
+RUN R --slave -e "install.packages('Seurat', repos='https://cloud.r-project.org/'); library('Seurat')"
 #RUN R --slave -e "library(BiocManager); BiocManager::install('ontoProc')"
 #RUN R --slave -e "library(BiocManager); BiocManager::install('BiocStyle')"
 #RUN R --slave -e "install.packages('devtools'); library('devtools')"
